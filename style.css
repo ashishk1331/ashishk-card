@@ -1,76 +1,73 @@
+:root{
+    --primary: #faedcd;
+    --secondary: #023047;
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 16px;
     font-family: 'Poppins', sans-serif;
+    color: var(--secondary);
 }
-
-.container{
+html, body, #app{
     width: 100%;
-    height: 100vh;
-    background-image: url(https://1.bp.blogspot.com/-fyF-OXXEBBY/X1altgmlwQI/AAAAAAAA66s/KVb5Fjlb_f41xu_pEjq5VpDhRWr2QbJFACLcBGAsYHQ/s2560/hexagon-blender-4k-22-3840x2160.jpg); /* You can change background here*/
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 100%;
+    background-color: var(--primary);
 }
-
-.card{
-    width: 90%;
-    max-width: 440px;
-    color: #fff;
-    text-align: center;
-    padding: 50px 35px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    background: rgba(255,255,255,0.2);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0,0,0,0.1);
-    backdrop-filter: blur(5px);
-}
-
-.card img{
-    width: 140px;
-    border-radius: 50%;
-    font-weight: 600;
-    margin-top: 20px;
-}
-
-.card p{
-    font-size: 18px;
-    margin: 10px auto;
-    max-width: 330px;
-}
-
-.card .links img{
-    width: 40px;
-    border-radius: 50%;
-    margin: 10px 5px;
-    transition: background 0.5s;
-}
-
-.card .links img:hover{
-    background: #ffffff;
-       box-shadow: 0 0 10px rgb(169, 205, 235);
-}
-
-.btn{
-    text-decoration: none;
+svg{
     display: inline-block;
-    font-size: 18px;
-    font-weight: 500;
-    background-color: transparent;
-    border: 1px solid white;
-    color: #fff;
-    padding: 10px 30px;
-    border-radius: 30px;
-    margin: 30px 0 10px;
+    width: 1.4em;
+    height: 1.4em;
+    fill: var(--secondary);
 }
-
-.btn:hover{
-    cursor: pointer;
-    background-color: white;
-    font-weight: medium;
-    box-shadow: 0 0 10px rgb(169, 205, 235);
-    color: #137570;
+.card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    max-width: 360px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 6px 6px 0 var(--secondary);
+    overflow: hidden;
+}
+.icon-tray{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1em;
+}
+.icon-tray > a{
+    text-decoration: none;;
+    margin: 0 0.32em;
+}
+.icon-tray:last-child{
+    margin-left: auto;
+}
+.icon-tray > a > svg{
+    width: 1.6em;
+    height: 1.6em;
+}
+.clip{
+    position: absolute;
+    top: 0;
+    left: 86%;
+    transform: translate(-50%,-50%);
+}
+.clip > svg{
+    width: 6em;
+    height: 6em;
+    transform: rotate(90deg);
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 2em;
+    background-color: var(--secondary);
+    color: white;
+    margin-top: 1em;
+    letter-spacing: 1px;
 }
